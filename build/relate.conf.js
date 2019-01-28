@@ -17,14 +17,14 @@ const getEntry =() => {
             eArr.push(name);
             entry[n] = eArr;
         });
-    return entry;
+    return entry
 };
 
 module.exports.relate = {
     envs: process.env.NODE_ENV, //从package.json 中获取环境
     entrys: getEntry(), //入口文件
     rootPath: {
-        test: './test/',
+        test: './',
         pro: './pro/'
     }
 }

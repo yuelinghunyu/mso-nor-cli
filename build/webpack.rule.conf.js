@@ -48,6 +48,12 @@ const rules = [
 		// exclude: "/node_modules/"
     },
     {
+        test: /\.handlebars$/,
+        use:[{
+            loader: 'handlebars-loader'
+        }],
+    },
+    {
         test:/\.(png|jpg|gif)$/,
         use:[{
             loader: "url-loader",
