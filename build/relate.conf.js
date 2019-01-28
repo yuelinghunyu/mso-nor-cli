@@ -8,5 +8,9 @@ module.exports.relate = {
         index: './src/page/index/index.js',
         page1: './src/page/page1/index.js',
         page2: './src/page/page2/index.js',
+    },
+    rootPath: {
+        test: './test/',
+        pro: './pro/'
     }
 }

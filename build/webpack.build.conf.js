@@ -12,14 +12,18 @@ const optimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const extractTextPlugin = require('extract-text-webpack-plugin')
 // 引用webpack.base.conf.js
 const webpackConfigBase = require('./webpack.base.conf')
-
+// 获取打包路径
+const rootPath = 
+	require('./relate.conf').relate.envs === "test"
+	? require('./relate.conf').relate.rootPath.test
+	: require('./relate.conf').relate.rootPath.pro
 // 生产webpack 打包配置
 const webpackConfigProd = {
     mode: 'production', // 通过 mode 声明生产环境
     output: {
 		path: path.resolve(__dirname, '../mso'),
 		filename: './js/[name].[hash].js', // 打包多出口文件
-		publicPath: './'
+		publicPath: rootPath
     },
     devtool: 'cheap-module-eval-source-map',
     plugins: [
