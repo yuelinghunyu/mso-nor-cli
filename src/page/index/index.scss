@@ -1,0 +1,39 @@
+#app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    img{
+        width: 150px;
+        height: 150px;
+        border-radius:50%; 
+        display: block;
+        border: none;
+        animation: roleing 5s infinite linear;
+    }
+    .app-author{
+        font-size: 24px;
+        font-weight: bold;
+        padding: 10px;
+    }
+    .app-btn{
+        width: 300px;
+        height: 40px;
+        background-color: cornflowerblue;
+        border-radius: 5px;
+        color: #fff;
+        line-height: 40px;
+        text-align: center;
+        margin: 10px;
+        cursor: pointer;
+    }
+}
+@keyframes roleing{
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(360deg)  
+  }
+}
