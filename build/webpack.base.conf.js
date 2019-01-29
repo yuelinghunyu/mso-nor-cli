@@ -86,11 +86,11 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery'
         }),
-        new copyWebpackPlugin([{ //静态资源输出
-            from: path.resolve(__dirname, '../static'),
-            to: './static',
-			ignore: ['.*']
-        }]),
+        // new copyWebpackPlugin([{ //静态资源输出
+        //     from: path.resolve(__dirname, '../static'),
+        //     to: './static',
+		// 	ignore: ['.*']
+        // }]),
         new purifyCssWebpack({ // 消除冗余的css代码
             paths: glob.sync(path.join(__dirname, "../src/*/*/*.html"))
         })
