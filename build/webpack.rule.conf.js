@@ -1,6 +1,7 @@
 /**
  * author: jdj
  */
+const path = require('path');
 const extractTextPlugin = require('extract-text-webpack-plugin')
 // 获取当前编辑环境
 const envs = require("./relate.conf").relate.envs
@@ -50,7 +51,7 @@ const rules = [
     {
         test: /\.handlebars$/,
         use:[{
-            loader: 'handlebars-loader'
+            loader: 'handlebars-loader?helperDirs[]='+path.resolve(__dirname, '../src/helpers')
         }],
     },
     {

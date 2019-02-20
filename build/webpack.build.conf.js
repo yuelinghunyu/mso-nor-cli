@@ -21,9 +21,9 @@ const rootPath =
 const webpackConfigProd = {
     mode: 'production', // 通过 mode 声明生产环境
     output: {
-		path: path.resolve(__dirname, '../mso'),
-		filename: 'js/[name].[hash].js', // 打包多出口文件
-		publicPath: rootPath
+			path: path.resolve(__dirname, '../mso'),
+			filename: 'static/js/[name].[hash].js', // 打包多出口文件
+			publicPath: rootPath
     },
     devtool: 'cheap-module-eval-source-map',
     plugins: [
@@ -38,7 +38,7 @@ const webpackConfigProd = {
 		}),
 		// 分离css插件参数为提取出去的路径
 		new extractTextPlugin({
-			filename: 'css/[name].[hash:8].min.css',
+			filename: 'static/css/[name].[hash:8].min.css',
 		}),
 		//压缩css
 		new optimizeCSSPlugin({
