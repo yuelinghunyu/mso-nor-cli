@@ -11,7 +11,7 @@ const webpackConfigDev = {
     mode: 'development', // 通过 mode 声明开发环境
     output: {
         path: path.resolve(__dirname, '../mso'),
-        filename: './js/[name].bundle.js'
+        filename: 'static/js/[name].bundle.js'
     },
     devServer: {
         contentBase: path.join(__dirname, "../src"),
