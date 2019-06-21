@@ -6,7 +6,7 @@ const extractTextPlugin = require('extract-text-webpack-plugin')
 // 获取当前编辑环境
 const envs = require("./relate.conf").relate.envs
 //css loader 分离判断
-const cssUsed = envs === 'development'?
+const cssUsed = envs === 'dev'?
         ["style-loader", "css-loader", "sass-loader", "postcss-loader"]:
         extractTextPlugin.extract({
             fallback: 'style-loader',
@@ -14,7 +14,7 @@ const cssUsed = envs === 'development'?
             publicPath: "../" // css中的基础路径
         })
 //less loader 分离判断
-const lessUsed = envs === 'development'?
+const lessUsed = envs === 'dev'?
         ["style-loader", "css-loader", "less-loader"]:
         extractTextPlugin.extract({
             fallback: "style-loader",

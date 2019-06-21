@@ -21,7 +21,7 @@ const getEntry =() => {
 };
 
 module.exports.relate = {
-    envs: process.env.NODE_ENV, //从package.json 中获取环境
+    envs: process.argv[2].replace("--", ""), //从package.json 中获取环境
     entrys: getEntry(), //入口文件
     rootPath: {
         test: './',

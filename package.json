@@ -4,10 +4,10 @@
   "description": "a html template",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=test webpack --config build/webpack.build.conf.js",
+    "test": "cross-env NODE_ENV=test webpack --test--config build/webpack.build.conf.js",
     "local": "npm run dev --[local]",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server  --config build/webpack.dev.conf.js",
-    "pro": "cross-env NODE_ENV=production webpack --config build/webpack.build.conf.js"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --dev --config build/webpack.dev.conf.js",
+    "pro": "cross-env NODE_ENV=production webpack --pro --config build/webpack.build.conf.js"
   },
   "repository": {
     "type": "git",
